@@ -3,31 +3,41 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-rgb: 244 255 235; /* #f4ffeb */
+  --background-rgb: 6 19 32; /* #061320 */
+  --primary-rgb: 64 248 255; /* #40f8ff */
+  --secondary-rgb: 16 55 91 /* #10375B */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+.movingBorder .line {
+  stroke-dasharray: 290;
+  stroke-width: 0.25rem;
+  fill: transparent;
+  animation: movingBorderAnimation 8s linear infinite;
+}
+
+.glow {
+  box-shadow: 0 0 20px #40f8ff;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@keyframes movingBorderAnimation {
+  from {
+    stroke-dashoffset: 0;
+    stroke: rgba(64, 248, 255, 0.8);
+  }
+  to {
+    stroke-dashoffset: 1000;
+    stroke: #269599;
   }
 }
