@@ -39,7 +39,7 @@ export default function TestimonialCarousel({ testimonials, interval = 5000 }: T
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           className="overflow-hidden w-full"
         >
-          <div className="flex items-center p-6 gap-6">
+          <div className="flex flex-col md:flex-row items-center p-6 gap-6">
             <motion.img
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -75,7 +75,7 @@ export default function TestimonialCarousel({ testimonials, interval = 5000 }: T
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
-                    className="font-semibold"
+                    className="font-semibold text-base"
                   >
                     {testimonials[currentIndex].author}
                   </motion.p>
@@ -83,7 +83,7 @@ export default function TestimonialCarousel({ testimonials, interval = 5000 }: T
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="text-sm text-gray-400"
+                    className="text-sm"
                   >
                     {testimonials[currentIndex].company}
                   </motion.p>
@@ -94,7 +94,7 @@ export default function TestimonialCarousel({ testimonials, interval = 5000 }: T
                   transition={{ delay: 0.7 }}
                   src={testimonials[currentIndex].logo.src}
                   alt={testimonials[currentIndex].company}
-                  className="h-auto "
+                  className=""
                 />
               </div>
               </div>
