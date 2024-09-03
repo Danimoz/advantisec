@@ -78,11 +78,11 @@ export default function Footer(){
         </div>
       </div>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-col md:flex-row">
         <div>
           <Image src={CompanyLogo} alt='Company Logo' />
         </div>
-        <div className="flex gap-10 md:gap-20">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-20">
           {footerLinks.map((section, index) => (
             <div key={index} className="space-y-4">
               <h6 className="font-semibold text-lg">{section.header}</h6>
@@ -102,7 +102,7 @@ export default function Footer(){
       
       <div className="space-y-8">
         <hr className="border border-primary" />
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex gap-4">
             <p className="text-sm">© {currentYear} Company. All rights reserved.</p>
             <div className="flex gap-4">
