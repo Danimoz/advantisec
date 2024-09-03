@@ -66,10 +66,6 @@ export default function CardsCarousel({ images }: CardsCarouselProps) {
               }}
               transition={{ 
                 duration: 1,
-                type: 'spring',
-                stiffness: 300,
-                damping: 30,
-                mass: 1,
                 ease: 'easeInOut',
               }}
             >
