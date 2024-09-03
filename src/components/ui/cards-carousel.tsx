@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, useMotionValue, useSpring } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 interface CardsCarouselProps {
   images: {
@@ -40,14 +40,11 @@ export default function CardsCarousel({ images }: CardsCarouselProps) {
   ];
 
   const animationValue = isMobile ? 30 : 100;
-  const springConfig = { stiffness: 300, damping: 30, mass: 1 };
 
   return (
     <div className="w-full flex pt-4 justify-center overflow-hidden">
       <AnimatePresence initial={false} custom={direction}>
-        {visibleSlides.map((slide, index) => {
-          const x = useMotionValue((index - 1) * animationValue);
-          useSpring(x, springConfig);          
+        {visibleSlides.map((slide, index) => {         
           return (
             <motion.div
               key={slide.src.src}
@@ -68,10 +65,13 @@ export default function CardsCarousel({ images }: CardsCarouselProps) {
                 x: direction >= 0 ? -animationValue : animationValue,
               }}
               transition={{ 
-                duration: 0.5, 
+                duration: 0.5,
+                type: 'spring',
+                stiffness: 300,
+                damping: 30,
+                mass: 1,
                 ease: [0.43, 0.13, 0.23, 0.96] // Custom easing function
               }}
-              style={{ x }}
             >
               <div className='flex-grow w-full'>
                 <motion.div
