@@ -1,8 +1,8 @@
 'use client';
 
-import { AnimatePresence, motion, useMotionValue, useSpring } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface CardsCarouselProps {
   images: {
@@ -17,20 +17,20 @@ export default function CardsCarousel({ images }: CardsCarouselProps) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setDirection(1);
-      setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDirection(1);
+      setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
   }, []);
 
   const visibleSlides = [
@@ -65,12 +65,12 @@ export default function CardsCarousel({ images }: CardsCarouselProps) {
                 x: direction >= 0 ? -animationValue : animationValue,
               }}
               transition={{ 
-                duration: 0.5,
+                duration: 1,
                 type: 'spring',
                 stiffness: 300,
                 damping: 30,
                 mass: 1,
-                ease: [0.43, 0.13, 0.23, 0.96] // Custom easing function
+                ease: 'easeInOut',
               }}
             >
               <div className='flex-grow w-full'>
