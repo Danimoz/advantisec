@@ -30,7 +30,7 @@ const footerLinks = [
   { 
     header: 'Our Work', 
     links: [
-      { title: 'Services', href: '#' },
+      { title: 'Services', href: '/services' },
       { title: 'Partners', href: '#' },
       { title: 'Testimonials', href: '#' },
       { title: 'Case Studies', href: '#' },

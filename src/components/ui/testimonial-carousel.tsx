@@ -14,9 +14,10 @@ interface TestimonialCarouselProps {
     logo: StaticImageData;
   }[],
   interval?: number
+  fullImage?: boolean
 }
 
-export default function TestimonialCarousel({ testimonials, interval = 5000 }: TestimonialCarouselProps) {
+export default function TestimonialCarousel({ testimonials, interval = 5000, fullImage }: TestimonialCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -46,7 +47,7 @@ export default function TestimonialCarousel({ testimonials, interval = 5000 }: T
               transition={{ delay: 0.2 }}
               src={testimonials[currentIndex].image.src}
               alt={testimonials[currentIndex].author}
-              className="border-2 border-primary rounded-lg"
+              className={`border-2 border-primary rounded-lg ${fullImage ? 'w-full' : ''}`}
             />
             <div className="ml-6 w-full">
               <motion.div
