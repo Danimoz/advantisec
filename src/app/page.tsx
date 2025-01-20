@@ -84,7 +84,7 @@ export default function Home() {
           <div className="text-[#28425a] space-y-2 my-5">
             <h2 className="font-bold text-3xl md:text-4xl">Choose Advantisec</h2>
             <p className="text-lg md:text-xl">
-              and join forces with the cybersecurity heroes who are passionate about educating and protecting SMEs like yours. Together, we'll safeguard your digital frontier and pave the way for a secure, thriving future.
+              and join forces with the cybersecurity heroes who are passionate about educating and protecting SMEs like yours. Together, we&apos;ll safeguard your digital frontier and pave the way for a secure, thriving future.
             </p>
           </div>
 
@@ -175,7 +175,7 @@ export default function Home() {
               <p className="text-xl text-[#28425a]">
                 Advantisec is here to safeguard your digital frontier. With our bi-decade-long experience and commitment to affordability, we offer tailored solutions that protect your business without breaking the bank.
                 <br /> <br />
-                Join forces with us to secure your databases, networks, and ultimately, your business's future. Let's collaborate to build a robust security infrastructure that stands the test of time and cyber threat.
+                Join forces with us to secure your databases, networks, and ultimately, your business&apos;s future. Let&apos;s collaborate to build a robust security infrastructure that stands the test of time and cyber threat.
               </p>
             </div>
           </div>
