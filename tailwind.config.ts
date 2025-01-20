@@ -14,6 +14,10 @@ const config: Config = {
         primary: "rgb(var(--primary-rgb) / <alpha-value>)",
         secondary: "rgb(var(--secondary-rgb) / <alpha-value>)",
       },
+      fontFamily: {
+        raleway: ['var(--font-raleway)'],
+        neuePower: ['var(--font-neue-power)']
+      },
       animation: {
         scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },

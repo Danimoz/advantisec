@@ -1,230 +1,187 @@
 import Image from "next/image";
-import HeroImg from "@assets/heroImg-min.png";
-import TailorImg from "@assets/tailor.png";
-import TogetherImg from "@assets/together.png";
-import affordableImg from "@assets/affordable 2.png";
-import WebflowTestimonialImg from '@assets/Testimonial.png';
-import GuardianImg from "@assets/brave.png";
-import PasswordImg from "@assets/blog.png";
-import AuthorImg from "@assets/Author.png";
-import Affordable from "@assets/affordable.png";
-import WebflowLogo from "@assets/Webflow.png";
+
 import OverlayAnimation from "@/components/ui/overlay-animation";
 import { Button } from "@/components/ui/Button";
-import CardsCarousel from "@/components/ui/cards-carousel";
-import { InfiniteMovingItems } from "@/components/ui/infinite-moving-items";
-import TestimonialCarousel from "@/components/ui/testimonial-carousel";
+import DraggableCarousel from "@/components/ui/draggable-carousel";
+import { Card, CardContent } from "@/components/ui/Card";
+import GradientBorderCard from "@/components/ui/gradient-border-card";
+import { carouselData, marketingPanels, serviceCards, certifications } from "./page.constants";
 
-const carouselData = [
-  { src: TailorImg, text: "Tailored" },
-  { src: TogetherImg, text: "Together" },
-  { src: Affordable, text: "Affordable" },
-  { src: GuardianImg, text: "Guardians" },
-]
+import HeroImg from "@assets/heroImg-min.png";
+import AffordableImg from "@assets/affordable.png";
+import LockImg from "@assets/Group 28 - Scaled Raster Image.png";
+import CTAImg from "@assets/Group 30.png";
+import Hero from "@/components/ui/hero";
 
-const testimonialData = [
-  { 
-    image: WebflowTestimonialImg, 
-    stars: 5, 
-    quote: "Advantisec's cybersecurity solutions have been instrumental in protecting our company's sensitive data. Their expertise and dedication to securing our networks have given us peace of mind.",
-    logo: WebflowLogo,
-    author: 'John Doe',
-    company: 'Webflow'
-  }
-]
-
-const movingItems = [WebflowLogo, WebflowLogo]
-
-const blogPosts = [
-  { 
-    img: PasswordImg, 
-    title: 'The Importance of Secure Passwords',
-    category: 'News',
-    description: 'Learn how to create strong and secure passwords to protect your data.', 
-    date: '11 Jan 2022',
-    length: '5 min read',
-    author: 'John Doe',
-    authorImg: AuthorImg
-  },
-  { 
-    img: PasswordImg, 
-    title: 'How to Recognize Phishing Emails',
-    category: 'Tips',
-    description: 'Learn how to identify and avoid falling for phishing email scams.', 
-    date: '11 Jan 2022',
-    length: '5 min read',
-    author: 'Jane Smith',
-    authorImg: AuthorImg
-  },
-  { 
-    img: PasswordImg, 
-    title: 'Protect Your Business from Ransomware',
-    category: 'News',
-    description: 'Dicover strategies to safeguard your business from ransomware attacks.', 
-    date: '2022-01-01',
-    length: '5 min read',
-    author: 'John Doe',
-    authorImg: AuthorImg
-  },
-]
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <section className='relative'>
-        <Image 
-          alt="hero image" 
-          src={HeroImg}
-          priority={true}
-          className=""
-        />
-        <OverlayAnimation />
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <h1 className='text-balance font-black sm:tracking-widest md:tracking-wider text-center text-3xl md:text-5xl lg:text-7xl xl:text-9xl'>WE SECURE</h1>
-          <div className="flex justify-center cursor-pointer">
-            <div className="relative md:w-2/3 rounded-xl m-4 movingBorder">
-              <svg height='100%' width='100%' xmlns="http://www.w3.org/2000/svg" className="absolute rounded-xl">
-                <rect
-                  rx='12'
-                  ry='12'
-                  className="line rounded-xl"
-                  width="100%"
-                  height="100%"
-                  strokeLinejoin="round"
-                  strokeLinecap="round"
-                />
-              </svg>
-              <div className="flex justify-center w-full">
-                <Button variant='background' size='xl' className="w-full shadow-inner shadow-primary">
-                  <h6 className="text-primary font-bold text-xl">Get Secured Now</h6>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <main className="min-h-screen font-raleway">
+      {/* Hero Section */}
+      <Hero
+        image={HeroImg}
+        heroTextBeforeSplit="Safeguard Your"
+        heroTextAfterSplit="Digital Frontier"
+      />
 
-      <section className="border-t border-primary">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10 container mx-auto py-10 md:py-14 lg:py-20 xl:py-28 px-8 md:px-10 lg:px-12 xl:px-16">
-          <div className="w-full">
-            <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl">
-              Protecting SMEs with affordable cybersecurity solutions
-            </h2>
-            <p className="text-lg mt-4">
-              We are a cybersecurity company dedicated to providing cost-friendly and tailored cybersecurity solutions to small and medium-scale enterprises (SMEs) in the United Kingdom. 
-              Our mission is to secure SMEs&apos; databases and networks, ensuring the overall security of the community and the global economy.
+      {/* Folder Carousel Section */}
+      <section className="py-10 md:py-14 lg:py-20 xl:py-28 bg-white space-y-5">
+        <div className="flex justify-center items-center">
+          <h6 className="text-center p-5 rounded-xl text-secondary font-medium text-sm bg-[#f5feff]">Empowering SMEs with Affordable Tailored Cybersecurity</h6>
+        </div>
+        <DraggableCarousel folders={carouselData} />
+      </section>
+      
+      {/* Marketing Section */}
+      <section className="py-10 md:py-14 lg:py-20 xl:py-28 bg-white space-y-6">
+        <div className="flex justify-center items-center">
+          <h6 className="p-5 text-secondary rounded-xl font-medium text-sm bg-[#f5feff]">Safeguarding SMEs Your Trusted Cybersecurity Partner</h6>
+        </div>
+
+        <div className="container mx-auto rounded-3xl bg-[#ecfeff] bg-opacity-50 p-10 border shadow-inner space-y-10">
+          <div>
+            <h2 className="font-bold text-[#28425a] text-3xl">At Advantisec,</h2>
+            <p className="text-secondary font-medium text-xl">
+              we exist to provide cost-friendly and tailored cybersecurity solutions for SMEs in the UK. With our bi-decade-long experience in safeguarding digital systems, we&apos;re on a mission to secure your databases and networks, ultimately protecting both your business and the global economy.
             </p>
-            <Button size='lg' className="mt-6">
-              <h6 className="text-secondary text-base">Learn More</h6>
-            </Button>
           </div>
-          <div className="rounded-xl border-2 border-primary w-full">
-            <Image 
-              alt='affordable cybersecurity solutions' 
-              src={affordableImg}
-              className="rounded-xl w-full"
-            />
+
+          <div className='flex flex-col md:flex-row gap-5'>
+            {marketingPanels.map((panel, index) => (
+              <Card key={index} className="p-0">
+                <CardContent className="p-5">
+                  {index % 2 === 0 ? (
+                    <div className="w-full space-y-2 text-[#28425a]">
+                      <Image 
+                        alt={panel.imageAlt} 
+                        src={panel.imageSrc}
+                        className="w-full rounded-2xl"
+                      />
+                      <h3 className="font-bold text-2xl ">{panel.title}</h3>
+                      <p className="text-base">{panel.description}</p>
+                    </div>
+                  ) : (
+                    <div className="w-full space-y-2 text-[#28425a]">
+                      <h3 className="font-bold text-2xl">{panel.title}</h3>
+                      <p className="text-base">{panel.description}</p>
+                      <Image 
+                        alt={panel.imageAlt} 
+                        src={panel.imageSrc}
+                        className="w-full rounded-2xl"
+                      />
+                        
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
-      </section>
 
-      <section className="py-10 md:py-14 lg:py-20 xl:py-28">
-        <CardsCarousel images={carouselData} />
-      </section>
+        <div className="container mx-auto rounded-3xl bg-[#ecfeff] bg-opacity-50 p-10 border shadow-inner">
+          <Image src={AffordableImg} alt="Affordable Cybersecurity" className="w-full rounded-2xl" />
 
-      <section className="py-10 md:py-14 lg:py-20 xl:py-28">
-        <p className="text-lg font-bold text-center">Recognized by leading companies worldwide for cybersecurity expertise</p>
-        <div className="flex items-center justify-center relative overflow-hidden h-[10rem]">
-          <InfiniteMovingItems items={movingItems} />
+          <div className="text-[#28425a] space-y-2 my-5">
+            <h2 className="font-bold text-3xl md:text-4xl">Choose Advantisec</h2>
+            <p className="text-lg md:text-xl">
+              and join forces with the cybersecurity heroes who are passionate about educating and protecting SMEs like yours. Together, we'll safeguard your digital frontier and pave the way for a secure, thriving future.
+            </p>
+          </div>
+
+          <Button variant='secondary'>Secure Your Digital Future Today</Button>
         </div>
       </section>
 
-     {/* Testimonials Section */}
-      <section className="container mx-auto py-10 md:py-14 lg:py-20 xl:py-28 px-8 md:px-10 lg:px-12 xl:px-16">
-        <TestimonialCarousel testimonials={testimonialData} />
-      </section>
-
-     {/* CTA Section */}
-      <section className="flex flex-col md:flex-row items-center justify-between gap-10 container mx-auto py-10 md:py-14 lg:py-20 xl:py-28 px-8 md:px-10 lg:px-12 xl:px-16">
-        <div className="space-y-6">
-          <h2 className="font-bold text-2xl md:text-4xl">
-            Expert cybersecurity solutions for SMEs
-          </h2>
-          <p className="text-lg">Book a free consultation today and secure your business</p>
-        </div>
-        <Button size='lg' className="text-secondary self-start">
-          Book Now
-        </Button>
-      </section>
-
-      {/* Blog Section */}
-      <section className="container mx-auto py-10 md:py-14 lg:py-20 xl:py-28 px-8 md:px-10 lg:px-12 xl:px-16">
-        <div className='space-y-2 mb-12'>
-          <h6 className="font-semibold text-base text-center">Latest</h6>
-          <h2 className="font-bold text-3xl md:text-5xl text-center">Stay Informed with Cybersecurity</h2>
-          <p className="text-center text-lg">Discover the latest insights and trends in cybersecurity.</p>
+      {/* Consultation Section */}
+      <section className="py-10 md:py-14 lg:py-20 xl:py-28 space-y-10">
+        <div className="flex justify-center items-center">
+          <h6 className="text-center p-5 rounded-xl text-white font-medium text-sm bg-[#4d4d4d] bg-opacity-20">Unlock Your Cybersecurity Potential Free Consultation</h6>
         </div>
 
-        <div className='flex flex-col md:flex-row gap-6'>
-          {blogPosts.map((post, index) => (
-            <div key={index} className="w-full md:w-1/3 rounded-xl border border-primary">
-              <div className="relative w-full">
-                <Image 
-                  alt='blog post' 
-                  src={post.img}
-                  className=" rounded-t-xl w-full"
-                />
-                <div className='absolute rounded-t-xl inset-0' style={{ backgroundColor: 'rgba(64, 248, 255, 0.5)' }} />
+        <GradientBorderCard 
+          gradientDirection='down' 
+          cardClassName="bg-[#071929] border-transparent py-5 md:py-10 px-6 md:px-16" 
+          className="container mx-auto"
+        >
+          <GradientBorderCard gradientDirection="up" cardClassName="bg-[#0a2137] border-transparent p-5">
+            <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <GradientBorderCard gradientDirection="down" cardClassName="bg-[#071929] border-transparent p-5 space-y-3">
+                <Image src={LockImg} alt="Lock Icon" className="w-full rounded-xl" />
+                <p className="text-white text-base leading-[150%]">
+                  At Advantisec, we believe in empowering SMEs with affordable, tailored cybersecurity solutions. Our free consultation is your first step towards safeguarding your digital frontier. During this session, our experts will:
+                </p>
+              </GradientBorderCard>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {serviceCards.map((card, index) => (
+                  <GradientBorderCard key={index} gradientDirection="down" cardClassName="bg-[#071929] border-transparent p-4 space-y-8 h-full">
+                    <Image src={card.icon} alt="Icon" className="" />
+                    <p className="text-white text-xs">{card.text}</p>
+                  </GradientBorderCard>
+                ))}
               </div>
-              <div className="p-6 flex-grow">
-                <div className="space-y-2">
-                  <p className="text-sm font-semibold">{post.category}</p>
-                  <h4 className="font-bold text-2xl line-clamp-2">{post.title}</h4>
-                  <p className="text-sm line-clamp-3">{post.description}</p>
-                </div>
-                <div className="flex gap-4 mt-6">
-                  <Image 
-                    alt='author' 
-                    src={post.authorImg}
-                    className="rounded-full"
-                  />
-                  <div className="space-y-1">
-                    <p className="text-sm font-semibold">{post.author}</p>
-                    <p className="text-sm">
-                      {post.date}
-                      <span className="mx-2">•</span>
-                      {post.length}
-                    </p>
+            </CardContent>
+          </GradientBorderCard>
+
+          <div className="flex justify-center items-center mt-10">
+            <GradientBorderCard gradientDirection="down" cardClassName="bg-[#071929] border-transparent">
+              <Button size='lg' variant='secondary'>Book Your Free Consultation</Button>
+            </GradientBorderCard>
+          </div>
+        </GradientBorderCard>
+      </section>
+
+      <section className="py-10 md:py-14 lg:py-20 xl:py-28 bg-white space-y-6">
+        <div className="flex justify-center items-center">
+          <h6 className="p-5 text-secondary rounded-xl font-medium text-sm bg-[#f5feff]">Certifications Earned By Our Team</h6>
+        </div>
+
+        <div className="container mx-auto rounded-3xl bg-[#ecfeff] bg-opacity-50 p-10 border shadow-inner space-y-10">
+          <p className="text-center text-secondary font-medium text-xl">We have industry certified experts - Some of the certifications our experts have are </p>
+
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-12 md:gap-24">
+            {certifications.map((cert, index) => (
+              <Card key={index} className="p-0 bg-[#ecfeff] px-5 py-8">
+                <CardContent className="p-5">
+                  <div className="w-full flex flex-col space-y-2 text-[#28425a]">
+                    <div className="h-80">
+                      <Image 
+                        alt={cert.title} 
+                        src={cert.image}
+                        className="w-full h-full rounded-2xl"
+                      />
+                    </div>
+                    <h3 className="text-[#28425a] text-base">{cert.title}</h3>
                   </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="flex justify-center mt-10">
-          <Button size='lg' variant='background' className="border border-primary">
-            View all
-          </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* CTA2 Section */}
-      <section className="flex flex-col md:flex-row items-center justify-between gap-10 container mx-auto py-10 md:py-14 lg:py-20 xl:py-28 px-8 md:px-10 lg:px-12 xl:px-16">
-        <div>
-          <h2 className="font-bold text-balance text-2xl md:text-4xl">
-            Secure your Business Today
-          </h2>
+      <section className="py-10 md:py-14 lg:py-20 xl:py-28 bg-white space-y-6">
+        <div className="flex justify-center items-center">
+          <h6 className="p-5 text-secondary rounded-xl font-medium text-sm bg-[#f5feff]">Secure Your Digital Future Today</h6>
         </div>
-        <div className="space-y-4">
-          <p className="text-lg">Secure Your Business Today Contact Advantisec for a cybersecurity consultation or quote tailored to your business needs.</p>
-          <div className="flex gap-6 items-center">
-            <Button size='lg' className="text-secondary">
-              Get Quote
-            </Button>
-            <Button size='lg' variant='background' className="border border-primary">
-              Learn More
-            </Button>
+
+        <div className="container mx-auto rounded-3xl bg-[#ecfeff] bg-opacity-50 p-10 border shadow-inner">
+          <div className="grid grid-cols-1 md:grid-cols-3 items-stretch gap-5">
+            <div className="col-span-2">
+              <Image src={CTAImg} alt="CTA Image" className="w-full rounded-2xl" />
+            </div>
+            
+            <div className="col-span-1 p-4">
+              <p className="text-xl text-[#28425a]">
+                Advantisec is here to safeguard your digital frontier. With our bi-decade-long experience and commitment to affordability, we offer tailored solutions that protect your business without breaking the bank.
+                <br /> <br />
+                Join forces with us to secure your databases, networks, and ultimately, your business's future. Let's collaborate to build a robust security infrastructure that stands the test of time and cyber threat.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex justify-center items-center mt-10">
+            <Button size='lg' variant='secondary'>Get Your Tailored Security Quote</Button>
           </div>
         </div>
       </section>

@@ -25,7 +25,7 @@ export default function OverlayAnimation() {
       <div 
         className="absolute inset-0 pointer-events-none" 
         style={{ 
-          background: `rgba(0, 0, 0, ${1 - lightIntensity})`, // From dark to transparent
+          background: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, ${1 - lightIntensity}))`, // From dark to transparent
           transition: 'background 2s ease-in-out', // Smooth transition
         }}
       />
