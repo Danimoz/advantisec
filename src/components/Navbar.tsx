@@ -25,12 +25,14 @@ export default function Navbar() {
         h-12 md:h-16 p-5 flex justify-between items-center
         bg-white bg-opacity-5 backdrop-blur-md rounded-2xl shadow-lg
       `}>
-        <Image 
-          alt='Advantisec' 
-          src={CompanyLogo} 
-          priority={true}
-          className="w-auto"
-        />
+        <Link href='/'>
+          <Image 
+            alt='Advantisec' 
+            src={CompanyLogo} 
+            priority={true}
+            className="w-auto"
+          />
+        </Link>
         
         <div className="hidden md:flex gap-8 text-primary">
           {navLinks.map((link) => (

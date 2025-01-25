@@ -9,6 +9,7 @@ interface GradientBorderCardProps {
   className?: string;
   from?: string;
   to?: string;
+  borderSize?: string;
 }
 
 const gradientDirections = {
@@ -18,8 +19,8 @@ const gradientDirections = {
   right: "bg-gradient-to-r",
 }
 
-export default function GradientBorderCard({ children, cardClassName, gradientDirection, className, from, to }: GradientBorderCardProps) {
-  const gradientClasses = cn(gradientDirections[gradientDirection], from || 'from-secondary', to || 'to-primary', 'p-[1px] rounded-xl', className);
+export default function GradientBorderCard({ children, cardClassName, gradientDirection, className, from, to, borderSize }: GradientBorderCardProps) {
+  const gradientClasses = cn(gradientDirections[gradientDirection], from || 'from-secondary', to || 'to-primary', borderSize || 'p-[1px]', 'rounded-xl', className);
   return (
     <div className={gradientClasses}>
       <Card className={cn(cardClassName, 'rounded-xl')}>

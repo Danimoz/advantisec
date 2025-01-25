@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import OverlayAnimation from "@/components/ui/overlay-animation";
 import { Button } from "@/components/ui/Button";
 import DraggableCarousel from "@/components/ui/draggable-carousel";
 import { Card, CardContent } from "@/components/ui/Card";
@@ -48,7 +47,7 @@ export default function Home() {
 
           <div className='flex flex-col md:flex-row gap-5'>
             {marketingPanels.map((panel, index) => (
-              <Card key={index} className="p-0">
+              <GradientBorderCard key={index} gradientDirection="down" cardClassName=" bg-[#ecfeff] h-full border-transparent p-0 space-y-3" from="from-[#28425a]" to='to-[#ecfeff]'>
                 <CardContent className="p-5">
                   {index % 2 === 0 ? (
                     <div className="w-full space-y-2 text-[#28425a]">
@@ -73,7 +72,7 @@ export default function Home() {
                     </div>
                   )}
                 </CardContent>
-              </Card>
+              </GradientBorderCard>
             ))}
           </div>
         </div>

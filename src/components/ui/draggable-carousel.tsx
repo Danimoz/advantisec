@@ -54,7 +54,7 @@ export default function DraggableCarousel({ folders }: FolderCarouselProps) {
     >
       <motion.div ref={constraintsRef} className="absolute h-auto w-full bg-gradient-to-l" />
       <motion.div
-        className="flex gap-4"
+        className="flex gap-2 md:ml-24 md:pl-8"
         drag='x'
         style={{ x }}
         animate={controls}
@@ -64,7 +64,7 @@ export default function DraggableCarousel({ folders }: FolderCarouselProps) {
         {folders.map((folder, index) => (
           <motion.div
             key={"card" + index}
-            className={`flex-shrink-0 ${isMobile ? 'w-[90%]' : 'w-[45%]'}`}
+            className={`flex-shrink-0 ${isMobile ? 'w-[90%]' : 'w-[48%]'}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 * index, ease: 'easeOut', once: true } }}
           >
