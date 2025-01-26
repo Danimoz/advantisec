@@ -49,11 +49,11 @@ export default function Services() {
         >
           <CardContent className='p-5 text-[#28425a]'>
             <GradientBorderCard gradientDirection="down" from='from-[#ecfeff]' to='to-[#ecfeff]' cardClassName="bg-[#ecfeff] border-transparent p-3">
-              <CardContent className='p-5'>
+              <CardContent className='p-1.5 md:p-5'>
                 <Image src={AffordableImg} alt='Affordable Cybersecurity' className='w-full rounded-xl' />
                 <h3 className='font-bold text-3xl md:text-5xl mt-5'>Assurance Activities</h3>
 
-                <ul className='flex flex-col gap-10 px-10 mt-5'>
+                <ul className='flex flex-col gap-10 px-4 md:px-10 mt-5'>
                   {services.map((service, index) => (
                     <li key={index} className='list-disc'>
                       <p className='text-xl'>
@@ -65,7 +65,7 @@ export default function Services() {
                 </ul>
 
                 <GradientBorderCard gradientDirection='down' cardClassName="bg-[#071929] border-transparent" className='inline-flex mt-10'>
-                  <Button size='lg' variant='secondary'>Get Your Tailored Security Quote</Button>
+                  <Button variant='secondary' className=''>Get Your Tailored Security Quote</Button>
                 </GradientBorderCard>
               </CardContent>
             </GradientBorderCard>
@@ -73,7 +73,7 @@ export default function Services() {
         </GradientBorderCard>
       </section>
       
-      <section className='py-10 md:py-14 lg:py-20 xl:py-28 text-white space-y-6'>
+      <section className='py-10 md:py-14 lg:py-20 xl:py-28 space-y-6'>
         <GradientBorderCard 
           gradientDirection="down"  
           cardClassName="bg-[#071929] border-transparent p-3" 
@@ -81,11 +81,11 @@ export default function Services() {
         >
           <CardContent className='p-5'>
             <GradientBorderCard gradientDirection="down" from='from-[#0a2137]' to='to-[#0a2137]' cardClassName="bg-[#0a2137] border-transparent p-3">
-              <CardContent className='p-5'>
+              <CardContent className='p-1.5 md:p-5'>
                 <Image src={AffordableImg} alt='Affordable Cybersecurity' className='w-full rounded-xl' />
                 <h3 className='font-bold text-3xl md:text-5xl mt-5'>GDPR Compliance</h3>
 
-                <ul className='flex flex-col gap-10 px-10 mt-5'>
+                <ul className='flex flex-col gap-10 px-5 md:px-10 mt-5'>
                   {gdpr.map((service, index) => (
                     <li key={index} className='list-disc'>
                       <p className='text-xl'>
@@ -97,7 +97,7 @@ export default function Services() {
                 </ul>
 
                 <GradientBorderCard gradientDirection='down' cardClassName="bg-[#071929] border-transparent" className='inline-flex mt-10'>
-                  <Button size='lg'>Get Your Tailored Security Quote</Button>
+                  <Button>Get Your Tailored Security Quote</Button>
                 </GradientBorderCard>
               </CardContent>
             </GradientBorderCard>
@@ -113,11 +113,11 @@ export default function Services() {
         >
           <CardContent className='p-5 md:p-10 text-[#28425a]'>
             <GradientBorderCard gradientDirection="down" from='from-[#ecfeff]' to='to-[#ecfeff]' cardClassName="bg-[#ecfeff] border-transparent p-3">
-              <CardContent className='p-5'>
+              <CardContent className='p-1.5 md:p-5'>
                 <Image src={AffordableImg} alt='Affordable Cybersecurity' className='w-full rounded-xl' />
                 <h3 className='font-bold text-3xl md:text-5xl mt-5'>Penetration Testing</h3>
 
-                <ul className='flex flex-col gap-10 px-10 mt-5'>
+                <ul className='flex flex-col gap-10 md:px-5 px-10 mt-5'>
                   {penetration.map((service, index) => (
                     <li key={index} className='list-disc'>
                       <p className='text-xl'>
@@ -129,7 +129,7 @@ export default function Services() {
                 </ul>
 
                 <GradientBorderCard gradientDirection='down' cardClassName="bg-[#071929] border-transparent" className='inline-flex mt-10'>
-                  <Button size='lg' variant='secondary'>Get Your Tailored Security Quote</Button>
+                  <Button variant='secondary'>Get Your Tailored Security Quote</Button>
                 </GradientBorderCard>
               </CardContent>
             </GradientBorderCard>
@@ -137,7 +137,7 @@ export default function Services() {
         </GradientBorderCard>
       </section>
 
-      <section className='py-10 md:py-14 lg:py-20 xl:py-28 text-white space-y-6'>
+      <section className='py-10 md:py-14 lg:py-20 xl:py-28 space-y-6'>
         <GradientBorderCard 
           gradientDirection="down"  
           cardClassName="bg-[#071929] border-transparent p-3" 
@@ -145,11 +145,11 @@ export default function Services() {
         >
           <CardContent className='p-5'>
             <GradientBorderCard gradientDirection="down" from='from-[#0a2137]' to='to-[#0a2137]' cardClassName="bg-[#0a2137] border-transparent p-3">
-              <CardContent className='p-5'>
+              <CardContent className='p-1.5 md:p-5'>
                 <Image src={AffordableImg} alt='Affordable Cybersecurity' className='w-full rounded-xl' />
                 <h3 className='font-bold text-3xl md:text-5xl mt-5'>Vulnerability Management</h3>
 
-                <ul className='flex flex-col gap-10 px-10 mt-5'>
+                <ul className='flex flex-col gap-10 px-5 md:px-10 mt-5'>
                   {vulnerabilities.map((service, index) => (
                     <li key={index} className='list-disc'>
                       <p className='text-xl'>
@@ -161,7 +161,7 @@ export default function Services() {
                 </ul>
 
                 <GradientBorderCard gradientDirection='down' cardClassName="bg-[#071929] border-transparent" className='inline-flex mt-10'>
-                  <Button size='lg'>Get Your Tailored Security Quote</Button>
+                  <Button>Get Your Tailored Security Quote</Button>
                 </GradientBorderCard>
               </CardContent>
             </GradientBorderCard>
@@ -177,11 +177,11 @@ export default function Services() {
         >
           <CardContent className='p-5 text-[#28425a]'>
             <GradientBorderCard gradientDirection="down" from='from-[#ecfeff]' to='to-[#ecfeff]' cardClassName="bg-[#ecfeff] border-transparent p-3">
-              <CardContent className='p-5'>
+              <CardContent className='p-1.5 md:p-5'>
                 <Image src={AffordableImg} alt='Affordable Cybersecurity' className='w-full rounded-xl' />
-                <h3 className='font-bold text-3xl md:text-5xl mt-5 leading-loose'>Security Operations Center (SOC) as a Managed Security Service Provider (MSSP)</h3>
+                <h3 className='font-bold text-3xl md:text-5xl mt-5'>Security Operations Center (SOC) as a Managed Security Service Provider (MSSP)</h3>
 
-                <ul className='flex flex-col gap-10 px-10 mt-5'>
+                <ul className='flex flex-col gap-10 px-5 md:px-10 mt-5'>
                   {soc.map((service, index) => (
                     <li key={index} className='list-disc'>
                       <p className='text-xl'>
@@ -193,7 +193,7 @@ export default function Services() {
                 </ul>
 
                 <GradientBorderCard gradientDirection='down' cardClassName="bg-[#071929] border-transparent" className='inline-flex mt-10'>
-                  <Button size='lg' variant='secondary'>Get Your Tailored Security Quote</Button>
+                  <Button variant='secondary'>Get Your Tailored Security Quote</Button>
                 </GradientBorderCard>
               </CardContent>
             </GradientBorderCard>
@@ -213,7 +213,7 @@ export default function Services() {
                 <Image src={CTAImg} alt="CTA Image" className="w-full rounded-2xl" />
               </div>
               
-              <div className="col-span-1 p-4">
+              <div className="col-span-1 p-1.5 md:p-4">
                 <p className="text-xl text-[#28425a]">
                   Advantisec is here to safeguard your digital frontier. With our bi-decade-long experience and commitment to affordability, we offer tailored solutions that protect your business without breaking the bank.
                   <br /> <br />
@@ -223,7 +223,7 @@ export default function Services() {
             </div>
 
             <div className="flex justify-center items-center mt-10">
-              <Button size='lg' variant='secondary'>Get Your Tailored Security Quote</Button>
+              <Button variant='secondary'>Get Your Tailored Security Quote</Button>
             </div>
           </CardContent>
         </GradientBorderCard>
