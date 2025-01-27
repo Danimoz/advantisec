@@ -11,19 +11,19 @@ import { CardContent } from "./ui/Card";
 const footerLinks = [
   { 
     header: 'Home',
-    link: '#' 
+    link: '/' 
   },
   { 
     header: 'Services',
-    link: '#' 
+    link: '/services' 
   },
   { 
     header: 'About Us',
-    link: '#' 
+    link: '/about' 
   },
   { 
     header: 'Policies',
-    link: '#' 
+    link: '/policies' 
   },
   
 ]
@@ -80,8 +80,8 @@ export default function Footer(){
               <div className="flex gap-4">
                 <p className="text-sm">© {currentYear} Advantisec. All rights reserved.</p>
                 <div className="flex gap-4">
-                  <Link href="#" className="text-sm text-[#8ec6e6] underline">Privacy Policy</Link>
-                  <Link href="#" className="text-sm text-[#8ec6e6] underline">Terms and Conditions</Link>
+                  <Link href="/policies" className="text-sm text-[#8ec6e6] underline">Privacy Policy</Link>
+                  <Link href="/terms" className="text-sm text-[#8ec6e6] underline">Terms and Conditions</Link>
                 </div>
               </div>
               <div className="flex gap-4 items-center">
