@@ -15,8 +15,8 @@ export default function Terms() {
       />
 
       <section className="py-10 md:py-14 lg:py-20 xl:py-28 bg-white">
-        <GradientBorderCard className='container mx-auto' cardClassName='bg-[#f5feff] p-5 md:p-10' gradientDirection='down'>
-          <CardContent className="p-5">
+        <GradientBorderCard className='md:container md:mx-auto mx-4' cardClassName='bg-[#f5feff] p-5 md:p-10' gradientDirection='down'>
+          <CardContent className="p-1.5 md:p-5">
             <div className="mt-5 space-y-5">
               {terms.map((policy) => (
                 <Card key={policy.id} className="bg-[#ecfeff] p-5 md:p-10 border-transparent">
