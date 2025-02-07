@@ -25,11 +25,11 @@ export default function Terms() {
                       {policy.id}. {policy.title}
                     </h2>
                     {policy.subTitle && (
-                      <p className="text-lg md:text-xl">
+                      <p className="text-base md:text-xl">
                         {policy.subTitle}
                       </p>
                     )}
-                    <ul className={`${policy.content.length > 1 ? 'list-disc': ''} list-inside text-lg md:text-xl`}>
+                    <ul className={`${policy.content.length > 1 ? 'list-disc': ''} list-inside text-base md:text-xl`}>
                       {policy.content.map((point, index) => (
                         <li key={index}>
                           {point}

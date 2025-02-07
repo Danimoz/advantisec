@@ -15,7 +15,7 @@ export default function Policies() {
       />
 
       <section className="py-10 md:py-14 lg:py-20 xl:py-28 bg-white">
-        <GradientBorderCard className='md:container md:mx-auto mx-4' cardClassName='bg-[#f5feff] p-5 md:p-10' gradientDirection='down'>
+        <GradientBorderCard className='md:container md:mx-auto mx-4' cardClassName='bg-[#f5feff] p-3 md:p-10' gradientDirection='down'>
           <CardContent className="p-2 md:p-5">
             <Card className="bg-[#ecfeff] p-3 md:p-10 border-transparent">
               <CardContent className="text-[#28425a] space-y-5">
@@ -40,7 +40,7 @@ export default function Policies() {
                         {policy.subTitle}
                       </p>
                     )}
-                    <ul className={`${policy.content.length > 1 ? 'list-disc list-inside pl-5': ''} text-lg md:text-xl`}>
+                    <ul className={`${policy.content.length > 1 ? 'list-disc list-inside pl-5': ''} text-base md:text-xl`}>
                       {policy.content.map((point, index) => (
                         <li key={index}>
                           {point}
