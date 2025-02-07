@@ -7,7 +7,11 @@ import { services, gdpr, penetration, vulnerabilities, soc, serviceCards } from 
 import ServiceCard from './serviceCard';
 
 import HeroImg from '@assets/serviceHero.png';
-import AffordableImg from '@assets/affordable.png';
+import AssuranceImg from '@assets/assurance.png';
+import GDPRImg from '@assets/gdpr.png';
+import PenetrationImg from '@assets/Penetration.png';
+import VulnerabilityImg from '@assets/Vulnerability.png';
+import SOCImg from '@assets/soc.png';
 import CTAImg from "@assets/Group 30.png";
 
 
@@ -44,19 +48,24 @@ export default function Services() {
       <section className="py-10 md:py-14 lg:py-20 xl:py-28 bg-white space-y-6">
         <GradientBorderCard 
           gradientDirection="down"
-          cardClassName="bg-[#f5feff] border-transparent p-3 md:p-5" 
-          className='container mx-auto'
+          cardClassName="bg-[#f5feff] border-transparent p-1.5 md:p-5" 
+          className='mx-4 md:container md:mx-auto'
         >
           <CardContent className='p-5 text-[#28425a]'>
             <GradientBorderCard gradientDirection="down" from='from-[#ecfeff]' to='to-[#ecfeff]' cardClassName="bg-[#ecfeff] border-transparent p-3">
               <CardContent className='p-1.5 md:p-5'>
-                <Image src={AffordableImg} alt='Affordable Cybersecurity' className='w-full rounded-xl' />
+                <Image 
+                  src={AssuranceImg} 
+                  alt='Assurance' 
+                  className='md:w-full rounded-xl w-[320px] h-[200px] md:h-full'
+                  objectFit='contain'
+                />
                 <h3 className='font-bold text-3xl md:text-5xl mt-5'>Assurance Activities</h3>
 
                 <ul className='flex flex-col gap-10 px-4 md:px-10 mt-5'>
                   {services.map((service, index) => (
                     <li key={index} className='list-disc'>
-                      <p className='text-xl'>
+                      <p className='text-base md:text-xl'>
                         <span className='font-bold'>{service.heading} : </span>
                         <span className=''>{service.body}</span>
                       </p>
@@ -77,18 +86,23 @@ export default function Services() {
         <GradientBorderCard 
           gradientDirection="down"  
           cardClassName="bg-[#071929] border-transparent p-3" 
-          className='container mx-auto'
+          className='mx-4 md:container md:mx-auto'
         >
-          <CardContent className='p-5'>
+          <CardContent className='p-1.5 md:p-5'>
             <GradientBorderCard gradientDirection="down" from='from-[#0a2137]' to='to-[#0a2137]' cardClassName="bg-[#0a2137] border-transparent p-3">
               <CardContent className='p-1.5 md:p-5'>
-                <Image src={AffordableImg} alt='Affordable Cybersecurity' className='w-full rounded-xl' />
+                <Image 
+                  src={GDPRImg} 
+                  alt='GDPR Compliance' 
+                  className='w-[320px] md:w-full h-[200px] md:h-full rounded-xl'
+                  objectFit='contain'
+                />
                 <h3 className='font-bold text-3xl md:text-5xl mt-5'>GDPR Compliance</h3>
 
                 <ul className='flex flex-col gap-10 px-5 md:px-10 mt-5'>
                   {gdpr.map((service, index) => (
                     <li key={index} className='list-disc'>
-                      <p className='text-xl'>
+                      <p className='text-base md:text-xl'>
                         <span className='font-bold'>{service.heading} : </span>
                         <span className=''>{service.body}</span>
                       </p>
@@ -109,18 +123,23 @@ export default function Services() {
         <GradientBorderCard 
           gradientDirection="down"
           cardClassName="bg-[#f5feff] border-transparent" 
-          className='container mx-auto'
+          className='mx-4 md:container md:mx-auto'
         >
-          <CardContent className='p-5 md:p-10 text-[#28425a]'>
+          <CardContent className='p-3 md:p-10 text-[#28425a]'>
             <GradientBorderCard gradientDirection="down" from='from-[#ecfeff]' to='to-[#ecfeff]' cardClassName="bg-[#ecfeff] border-transparent p-3">
               <CardContent className='p-1.5 md:p-5'>
-                <Image src={AffordableImg} alt='Affordable Cybersecurity' className='w-full rounded-xl' />
+                <Image 
+                  src={PenetrationImg} 
+                  alt='Penetration Testing' 
+                  className='w-[320px] md:w-full h-[200px] md:h-full rounded-xl'
+                  objectFit='contain'
+                />
                 <h3 className='font-bold text-3xl md:text-5xl mt-5'>Penetration Testing</h3>
 
                 <ul className='flex flex-col gap-10 md:px-5 px-10 mt-5'>
                   {penetration.map((service, index) => (
                     <li key={index} className='list-disc'>
-                      <p className='text-xl'>
+                      <p className='text-base md:text-xl'>
                         <span className='font-bold'>{service.heading} : </span>
                         <span className=''>{service.body}</span>
                       </p>
@@ -141,18 +160,23 @@ export default function Services() {
         <GradientBorderCard 
           gradientDirection="down"  
           cardClassName="bg-[#071929] border-transparent p-3" 
-          className='container mx-auto'
+          className='mx-4 md:container md:mx-auto'
         >
           <CardContent className='p-5'>
             <GradientBorderCard gradientDirection="down" from='from-[#0a2137]' to='to-[#0a2137]' cardClassName="bg-[#0a2137] border-transparent p-3">
               <CardContent className='p-1.5 md:p-5'>
-                <Image src={AffordableImg} alt='Affordable Cybersecurity' className='w-full rounded-xl' />
+                <Image 
+                  src={VulnerabilityImg} 
+                  alt='Vulnerability Management' 
+                  className='w-[320px] md:w-full h-[200px] md:h-full rounded-xl'
+                  objectFit='contain'  
+                />
                 <h3 className='font-bold text-3xl md:text-5xl mt-5'>Vulnerability Management</h3>
 
                 <ul className='flex flex-col gap-10 px-5 md:px-10 mt-5'>
                   {vulnerabilities.map((service, index) => (
                     <li key={index} className='list-disc'>
-                      <p className='text-xl'>
+                      <p className='text-base md:text-xl'>
                         <span className='font-bold'>{service.heading} : </span>
                         <span className=''>{service.body}</span>
                       </p>
@@ -173,18 +197,23 @@ export default function Services() {
         <GradientBorderCard 
           gradientDirection="down"
           cardClassName="bg-[#f5feff] border-transparent p-3 md:p-5" 
-          className='container mx-auto'
+          className='mx-4 md:container md:mx-auto'
         >
-          <CardContent className='p-5 text-[#28425a]'>
+          <CardContent className='p-1.5 md:p-5 text-[#28425a]'>
             <GradientBorderCard gradientDirection="down" from='from-[#ecfeff]' to='to-[#ecfeff]' cardClassName="bg-[#ecfeff] border-transparent p-3">
               <CardContent className='p-1.5 md:p-5'>
-                <Image src={AffordableImg} alt='Affordable Cybersecurity' className='w-full rounded-xl' />
+                <Image 
+                  src={SOCImg} 
+                  alt='SOC' 
+                  className='w-[320px] md:w-full h-[200px] md:h-full rounded-xl'
+                  objectFit='contain'
+                />
                 <h3 className='font-bold text-3xl md:text-5xl mt-5'>Security Operations Center (SOC) as a Managed Security Service Provider (MSSP)</h3>
 
                 <ul className='flex flex-col gap-10 px-5 md:px-10 mt-5'>
                   {soc.map((service, index) => (
                     <li key={index} className='list-disc'>
-                      <p className='text-xl'>
+                      <p className='text-base md:text-xl'>
                         <span className='font-bold'>{service.heading} : </span>
                         <span className=''>{service.body}</span>
                       </p>
@@ -206,7 +235,7 @@ export default function Services() {
           <h6 className="p-5 text-secondary rounded-xl font-medium text-sm bg-[#f5feff]">Secure Your Digital Future Today</h6>
         </div>
 
-        <GradientBorderCard className='container mx-auto' cardClassName='bg-[#f5feff] p-10' gradientDirection='down'>
+        <GradientBorderCard className='mx-4 md:container md:mx-auto' cardClassName='bg-[#f5feff] p-4 md:p-10' gradientDirection='down'>
           <CardContent className='bg-[#ecfeff] p-5 md:p-10 rounded-2xl'>
             <div className="grid grid-cols-1 md:grid-cols-3 items-stretch gap-5">
               <div className="col-span-2">
@@ -214,7 +243,7 @@ export default function Services() {
               </div>
               
               <div className="col-span-1 p-1.5 md:p-4">
-                <p className="text-xl text-[#28425a]">
+                <p className="text-base md:text-xl text-[#28425a]">
                   Advantisec is here to safeguard your digital frontier. With our bi-decade-long experience and commitment to affordability, we offer tailored solutions that protect your business without breaking the bank.
                   <br /> <br />
                   Join forces with us to secure your databases, networks, and ultimately, your business&apos;s future. Let&apos;s collaborate to build a robust security infrastructure that stands the test of time and cyber threat.

@@ -34,10 +34,10 @@ export default function Home() {
       {/* Marketing Section */}
       <section className="py-10 md:py-14 lg:py-20 xl:py-28 bg-white space-y-6">
         <div className="flex justify-center items-center">
-          <h6 className="p-5 text-secondary rounded-xl font-medium text-sm bg-[#f5feff]">Safeguarding SMEs Your Trusted Cybersecurity Partner</h6>
+          <h6 className="p-5 text-secondary text-center rounded-xl font-medium text-sm bg-[#f5feff]">Safeguarding SMEs Your Trusted Cybersecurity Partner</h6>
         </div>
 
-        <div className="container mx-auto rounded-3xl bg-[#ecfeff] bg-opacity-50 p-10 border shadow-inner space-y-10">
+        <div className="mx-4 md:container md:mx-auto rounded-3xl bg-[#ecfeff] bg-opacity-50 p-6 md:p-10 border shadow-inner space-y-10">
           <div>
             <h2 className="font-bold text-[#28425a] text-3xl">At Advantisec,</h2>
             <p className="text-secondary font-medium text-xl">
@@ -77,7 +77,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container mx-auto rounded-3xl bg-[#ecfeff] bg-opacity-50 p-10 border shadow-inner">
+        <div className="mx-4 md:container md:mx-auto rounded-3xl bg-[#ecfeff] bg-opacity-50 p-10 border shadow-inner">
           <Image src={AffordableImg} alt="Affordable Cybersecurity" className="w-full rounded-2xl" />
 
           <div className="text-[#28425a] space-y-2 my-5">
@@ -99,19 +99,19 @@ export default function Home() {
 
         <GradientBorderCard 
           gradientDirection='down' 
-          cardClassName="bg-[#071929] border-transparent py-5 md:py-10 px-6 md:px-16" 
-          className="container mx-auto"
+          cardClassName="bg-[#071929] border-transparent py-5 md:py-10 px-5 md:px-16" 
+          className="mx-4 md:container md:mx-auto"
         >
-          <GradientBorderCard gradientDirection="up" cardClassName="bg-[#0a2137] border-transparent p-5">
+          <GradientBorderCard gradientDirection="up" cardClassName="bg-[#0a2137] border-transparent p-1.5 md:p-5">
             <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <GradientBorderCard gradientDirection="down" cardClassName="bg-[#071929] border-transparent p-5 space-y-3">
+              <GradientBorderCard gradientDirection="down" cardClassName="bg-[#071929] border-transparent p-1.5 md:p-5 space-y-3">
                 <Image src={LockImg} alt="Lock Icon" className="w-full rounded-xl" />
                 <p className="text-white text-base leading-[150%]">
                   At Advantisec, we believe in empowering SMEs with affordable, tailored cybersecurity solutions. Our free consultation is your first step towards safeguarding your digital frontier. During this session, our experts will:
                 </p>
               </GradientBorderCard>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div className="grid grid-cols-2 gap-5">
                 {serviceCards.map((card, index) => (
                   <GradientBorderCard key={index} gradientDirection="down" cardClassName="bg-[#071929] border-transparent p-4 space-y-8 h-full">
                     <Image src={card.icon} alt="Icon" className="" />
@@ -135,7 +135,7 @@ export default function Home() {
           <h6 className="p-5 text-secondary rounded-xl font-medium text-sm bg-[#f5feff]">Certifications Earned By Our Team</h6>
         </div>
 
-        <div className="container mx-auto rounded-3xl bg-[#ecfeff] bg-opacity-50 p-10 border shadow-inner space-y-10">
+        <div className="mx-4 md:container md:mx-auto rounded-3xl bg-[#ecfeff] bg-opacity-50 p-10 border shadow-inner space-y-10">
           <p className="text-center text-secondary font-medium text-xl">We have industry certified experts - Some of the certifications our experts have are </p>
 
           <div className="flex flex-col md:flex-row justify-center items-stretch gap-12 md:gap-24">
@@ -164,14 +164,14 @@ export default function Home() {
           <h6 className="p-5 text-secondary rounded-xl font-medium text-sm bg-[#f5feff]">Secure Your Digital Future Today</h6>
         </div>
 
-        <div className="container mx-auto rounded-3xl bg-[#ecfeff] bg-opacity-50 p-10 border shadow-inner">
+        <div className="mx-4 md:container md:mx-auto rounded-3xl bg-[#ecfeff] bg-opacity-50 p-10 border shadow-inner">
           <div className="grid grid-cols-1 md:grid-cols-3 items-stretch gap-5">
             <div className="col-span-2">
               <Image src={CTAImg} alt="CTA Image" className="w-full rounded-2xl" />
             </div>
             
             <div className="col-span-1 p-4">
-              <p className="text-xl text-[#28425a]">
+              <p className="text-base md:text-xl text-[#28425a]">
                 Advantisec is here to safeguard your digital frontier. With our bi-decade-long experience and commitment to affordability, we offer tailored solutions that protect your business without breaking the bank.
                 <br /> <br />
                 Join forces with us to secure your databases, networks, and ultimately, your business&apos;s future. Let&apos;s collaborate to build a robust security infrastructure that stands the test of time and cyber threat.
@@ -180,7 +180,7 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center items-center mt-10">
-            <Button size='lg' variant='secondary'>Get Your Tailored Security Quote</Button>
+            <Button variant='secondary'>Get Your Tailored Security Quote</Button>
           </div>
         </div>
       </section>

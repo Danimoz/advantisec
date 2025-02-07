@@ -10,8 +10,8 @@ export default function Policies() {
     <main className="min-h-screen font-raleway">
       <Hero
         image={HeroImg}
-        heroTextBeforeSplit="Policies For Your"
-        heroTextAfterSplit="Digital Frontier"
+        heroTextBeforeSplit="Privacy Policy"
+        heroTextAfterSplit=""
       />
 
       <section className="py-10 md:py-14 lg:py-20 xl:py-28 bg-white">
@@ -20,7 +20,7 @@ export default function Policies() {
             <Card className="bg-[#ecfeff] p-5 md:p-10 border-transparent">
               <CardContent className="text-[#28425a] space-y-5">
                 <h1 className="text-3xl md:text-5xl font-bold">
-                  Privacy Policy
+                  Introduction
                 </h1>
                 <p className="text-xl">
                   At Advantisec, we prioritize your privacy and are committed to safeguarding the personal information you share with us. This Privacy Policy outlines how we collect, use, disclose, and protect your data when you visit our website or use our cybersecurity services. By accessing our website, you consent to the practices described here.

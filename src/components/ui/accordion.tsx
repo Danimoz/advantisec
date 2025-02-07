@@ -26,11 +26,12 @@ export default function Accordion({ values }: AccordionProps) {
               className="flex justify-between items-center md:p-5 cursor-pointer"
               onClick={() => toggleAccordion(index)}
             >
-              <h3 className="font-bold text-2xl md:text-3xl">{value.question}</h3>
+              <h3 className="font-bold text-xl md:text-3xl">{value.question}</h3>
               <motion.span
                 initial={false}
                 animate={{ rotate: activeIndex === index ? 90 : 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="hidden md:inline-block"
               >
                 <LuChevronRight size={48} color="white" />
               </motion.span>
@@ -57,7 +58,7 @@ export default function Accordion({ values }: AccordionProps) {
                     transition={{ delay: 0.2, duration: 0.3 }}            
                     className="p-1.5 md:p-5"
                   >
-                    <li className="pl-1.5 md:pl-5 list-disc text-xl">{value.answer}</li>
+                    <li className="pl-1.5 md:pl-5 list-disc text-base md:text-xl">{value.answer}</li>
                   </motion.div>
                 </motion.div>
               )}

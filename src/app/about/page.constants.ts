@@ -1,6 +1,6 @@
-import PeopleImg from '@assets/Group 29 - Scaled Raster Image.png';
-import AffordableImg from '@assets/affordable 1.png';
-import EnableImg from '@assets/business-hands-joined-together-teamwork.png';
+import PeopleImg from '@assets/Group 63.png';
+import ProcessImg from '@assets/ProcessDriven.png';
+import EnableImg from '@assets/techenabled.png';
 
 
 export const values = [
@@ -33,7 +33,7 @@ export const approach = [
     description: 'We recognize that human expertise and awareness are crucial in cybersecurity.'
   },
   {
-    img: AffordableImg,
+    img: ProcessImg,
     title: 'Process-Driven',
     description: 'We follow meticulous processes to ensure comprehensive security coverage.'
   },

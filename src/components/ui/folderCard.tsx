@@ -25,8 +25,8 @@ export default function FolderCard({ fillColor, stopColor, stopColor2, heading, 
         />
         <defs>
           <linearGradient id="paint0_linear_279_605" x1="305" y1="0" x2="305" y2="410" gradientUnits="userSpaceOnUse">
-            <stop stop-color={stopColor}/>
-            <stop offset="1" stop-color={stopColor2}/>
+            <stop stopColor={stopColor}/>
+            <stop offset="1" stopColor={stopColor2}/>
           </linearGradient>
         </defs>
       </svg>

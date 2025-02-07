@@ -40,36 +40,18 @@ export default function Footer(){
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="container mx-auto py-10 md:py-14 lg:py-20 xl:py-28 px-8 md:px-10">
-      <GradientBorderCard gradientDirection="down" cardClassName="bg-[#071929] border-transparent py-5 md:py-10 px-6 md:px-16">
-        <CardContent className="space-y-20">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
-            <div className="space-y-1">
-              <h6 className="font-semibold text-lg">Subscribe to Newsletter</h6>
-              <p className="text-sm">Stay updated with our latest news and offers</p>
-            </div>
-            <div className="space-y-2">
-              <div className="flex gap-4">
-                <Input type='email' placeholder='Enter your email' className="bg-white" />
-                <GradientBorderCard gradientDirection="down" cardClassName="bg-[#071929] border-transparent">
-                  <Button variant='background'>Join</Button>
-                </GradientBorderCard>
-              </div>
-              <p className="text-sm">
-                By subscribing, you agree to our Privacy Policy.
-                <Link href="#" className="text-[#8ec6e6] ml-2 underline">Privacy Policy</Link>
-              </p>
-            </div>
-          </div>
-
-          <div className="flex justify-between flex-col md:flex-row">
-            <div>
+    <footer className="container mx-auto py-10 md:py-14 lg:py-20 xl:py-28 px-3 md:px-10">
+      <GradientBorderCard gradientDirection="down" cardClassName="bg-[#071929] border-transparent py-5 md:py-10 px-4 md:px-16">
+        <CardContent className="space-y-16 p-3">
+          <div className="flex md:justify-between flex-col-reverse md:flex-row">
+            <div className="flex justify-center items-center flex-col mt-6 md:mt-0 md:block">
               <Image src={CompanyLogo} alt='Company Logo' />
-              <Link href='mailto:contact@adantisec.com' className="underline">contact@adantisec.com</Link>
+              <Link href='mailto:contact@advantisec.com' className="underline">contact@advantisec.com</Link>
             </div>
-            <div className="grid grid-cols-2 gap-y-1 gap-x-10">
+
+            <div className="grid grid-cols-4 md:grid-cols-2 gap-y-1 gap-x-2 md:gap-x-10">
               {footerLinks.map((section, index) => (
-                <Link key={index} href={section.link} className="">{section.header}</Link>
+                <Link key={index} href={section.link} className="text-base font-semibold">{section.header}</Link>
               ))}
             </div>
           </div>
