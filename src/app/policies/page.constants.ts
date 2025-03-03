@@ -88,7 +88,7 @@ export const policies: PrivacyPolicySection[] = [
     id: 10,
     title: "Contact Us",
     content: [
-      "If you have any questions or concerns regarding our Privacy Policy, please contact us at: Email: privacy@advantisec.com"
+      "If you have any questions or concerns regarding our Privacy Policy, please contact us at: Email: contact@advantisec.com"
     ]
   }
 ]

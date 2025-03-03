@@ -1,11 +1,12 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import OverlayAnimation from "./overlay-animation";
 
 interface HeroProps {
   image: StaticImageData;
   heroTextBeforeSplit: string;
-  heroTextAfterSplit: string;
+  heroTextAfterSplit?: string;
 }
 
 
@@ -29,7 +30,9 @@ export default function Hero({ image, heroTextBeforeSplit, heroTextAfterSplit }:
             {heroTextBeforeSplit} <br className="my-5"/> {heroTextAfterSplit}
           </h1>
           <div className="flex items-center justify-center py-4 md:py-0">
-            <Button size='lg' variant='secondary'>Get a Tailored Quote</Button>
+            <Link href='/quote'>
+              <Button size='lg' variant='secondary'>Get a Tailored Quote</Button>
+            </Link>
           </div>
         </div>
       </div>

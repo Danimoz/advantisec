@@ -14,6 +14,11 @@ body {
   background: rgb(var(--background-rgb));
 }
 
+[type="checkbox"]:checked, [type="radio"]:checked {
+  background-color: rgb(var(--secondary-rgb));
+  border-color: #fff;
+}
+
 .movingBorder .line {
   stroke-dasharray: 290;
   stroke-width: 0.25rem;
@@ -28,6 +33,18 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  [type="checkbox"]:focus, [type="radio"]:focus {
+    --tw-ring-color: rgb(var(--secondary-rgb));;
+  }
+
+  [type="checkbox"]:checked, [type="radio"]:checked {
+    background-color: rgb(var(--secondary-rgb));
+    border-color: #fff;
+    color: rgb(var(--secondary-rgb)));
   }
 }
 

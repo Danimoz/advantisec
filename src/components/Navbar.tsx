@@ -48,7 +48,9 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:block">
-          <Button size='lg'>Get a Quote</Button>
+          <Link href='/quote'>
+            <Button size='lg'>Get a Quote</Button>
+          </Link>
         </div>
       </nav>
     </header>
