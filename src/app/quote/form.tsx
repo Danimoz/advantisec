@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import * as countryCodes from 'country-codes-list';
 import { useRef, useState } from "react";
 import { quoteFormSubmission } from "../actions";
+import { Textarea } from "@/components/ui/textarea";
 
 const myCountryCodesObject = countryCodes.customList(
   "countryCode",
@@ -60,16 +61,10 @@ export default function QuoteForm(){
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20">
           <div className="space-y-2.5">
-            <label className='text-2xl' htmlFor="corporateEmail">Corporate Email Address * </label>
-            <Input id="corporateEmail" type="email" placeholder="Corporate Email Address" name='corporateEmail' className="h-16 p-6 bg-white text-secondary rounded-xl" required/>
-          </div>
-          <div className="space-y-2.5">
             <label className='text-2xl' htmlFor="position">Position in Company * </label>
             <Input id="position" placeholder="Eg. CEO" name='position' className="h-16 p-6 bg-white text-secondary rounded-xl" required />
           </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20">
-          <div>
+          <div className="space-y-2.5">
             <label className='text-2xl' htmlFor="lastName">Mobile Number * </label>
             <div className="grid grid-cols-[35%_65%] gap-x-2 items-center">
               <Select name="countryCode">
@@ -84,9 +79,13 @@ export default function QuoteForm(){
                   ))}
                 </SelectContent>
               </Select>
-              <Input id="phone" name='phone' placeholder="Mobile Number" className="h-full max-h-16 p-6 bg-white text-secondary rounded-xl" required/>
+              <Input id="phone" name='phone' placeholder="Mobile Number" className="h-full max-h-16 p-6 bg-white text-secondary rounded-xl" required />
             </div>
           </div>
+        </div>
+        <div className="space-y-2.5">
+          <label className='text-2xl' htmlFor="lastName">How can we help? * </label>
+          <Textarea id="message" name='message' placeholder="Message" className="h-32 p-6 bg-white text-secondary rounded-xl" required />
         </div>
         
         <div className="border-t-2 border-white flex gap-x-10 md:gap-x-14 pt-4">

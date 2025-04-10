@@ -39,10 +39,11 @@ export async function quoteFormSubmission(formData: FormData) {
   const companyEmail = formData.get('companyEmail')
   const firstName = formData.get('firstName')
   const lastName = formData.get('lastName')
-  const corporateEmail = formData.get('corporateEmail')
+  const message = formData.get('message')
   const position = formData.get('position')
   const countryCode = formData.get('countryCode')
   const phone = formData.get('phone')
+  
 
   const { data, error } = await resend.emails.send({
     from: "Advantisec Website <onboarding@resend.dev>",
@@ -54,7 +55,7 @@ export async function quoteFormSubmission(formData: FormData) {
       <p style="margin-bottom: 10px;">Last Name: ${lastName}</p>
       <p style="margin-bottom: 10px;">Company Name: ${companyName}</p>
       <p style="margin-bottom: 10px;">Company Email: ${companyEmail}</p>
-      <p style="margin-bottom: 10px;">Corporate Email: ${corporateEmail}</p>
+      <p style="margin-bottom: 10px;">Message: ${message}</p>
       <p style="margin-bottom: 10px;">Position: ${position}</p>
       <p style="margin-bottom: 10px;">Phone: ${countryCode} ${phone}</p>
     `
